@@ -1,0 +1,39 @@
+#yes{
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+#no{
+    border-radius: 5px;
+    background-color: red;
+}
+
+#title{
+    font-size: 50px;
+}
+
+.button{
+    height: 35px;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+}
+
+body{
+    background-color: #ffc2d5;
+    /*background-image: url('cuori.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;*/
+}
+
+.button-container{
+    text-align: center;
+}
+
+#title{
+    text-align: center;
+    margin-top: 50px;
+}
+
+

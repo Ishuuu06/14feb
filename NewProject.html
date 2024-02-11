@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+    <title>My love</title>
+    <link rel="stylesheet" href="styleNewProject.css">
+</head>
+    
+<body>
+    <h1 id="title" style = "color: white;">Wanna be my valentine?🥺</h1>
+
+    <div class="button-container">
+    <button class="button" id="yes" onclick="doYes()">
+        yes
+    </button>
+
+    <button class="button" id="no" onclick="doNo()">
+        no
+    </button>
+    </div>
+
+    <img id="GIF" src="papera.gif" alt="Animated GIF" width="400" height="300" style="display: none; margin: auto; margin-top: 30px;">
+
+    <script>
+        function doYes(){
+           document.getElementById("title").innerHTML = "HURRAYYYYYYY I LOVE YOUUUUU🎉🎉🎉❤️❤️❤️💗💗"
+           document.getElementById("GIF").style.display = "block";
+           document.getElementById("no").style.display = "none";
+           document.getElementById("yes").style.display = "none";
+           document.body.style.backgroundImage = "url('cuori.gif')";
+
+        }
+
+        var index = 0;
+
+        function doNo() {
+            var headlines = ["Think again🤔", "Wrong one ❌", "Wroooonggggggggg😞", "Eddaiiiii scegli bene🥺","Dai usa il tuo piccolo cervello su🤏🏽🧠", "pagal aa tu? fer to try kr"];
+            if(index===headlines.length){
+                index=0;
+            }
+            var newHeadline = headlines[index];
+            document.getElementById("title").textContent = newHeadline;
+            index++;
+            document.getElementById("GIF").style.display = "none";
+        }
+
+        var gifs = ['coniglio.gif', 'oca.gif', 'papera.gif', 'love.gif']; // Replace with your GIF paths
+        var currentGifIndex = 0;
+        var gifElement = document.getElementById("GIF");
+
+        function changeGif() {
+         gifElement.src = gifs[currentGifIndex];
+         currentGifIndex = (currentGifIndex + 1) % gifs.length;
+        }
+        setInterval(changeGif, 2000);
+    </script>
+</body>
+
+</html>
